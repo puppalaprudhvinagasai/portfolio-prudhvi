@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 
 type SkillDataProviderProps = {
   src: string;
-  name: string;
+  name?: string;
   width: number;
   height: number;
   index: number;
@@ -28,7 +28,7 @@ export const SkillDataProvider = ({
     visible: { opacity: 1 },
   };
 
-  const animationDelay = 0.1;
+  const animationDelay = 0.2;
 
   return (
     <motion.div
@@ -38,8 +38,16 @@ export const SkillDataProvider = ({
       animate={inView ? "visible" : "hidden"}
       custom={index}
       transition={{ delay: index * animationDelay }}
+      className="flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-110"
     >
-      <Image src={`/skills/${src}`} width={width} height={height} alt={name} />
+      <Image
+        src={`/skills/${src}`}
+        width={width}
+        height={height}
+        alt={name || "skill"}
+        className="select-none"
+        draggable={false}
+      />
     </motion.div>
   );
 };

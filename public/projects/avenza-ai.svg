@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <!-- Dark Cosmic Background -->
+    <linearGradient id="bgAgent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050114" />
+      <stop offset="40%" stop-color="#0e0529" />
+      <stop offset="80%" stop-color="#15083b" />
+      <stop offset="100%" stop-color="#03000f" />
+    </linearGradient>
+
+    <!-- Glowing Gradients -->
+    <linearGradient id="violetCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="agentCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(30, 11, 69, 0.75)" />
+      <stop offset="100%" stop-color="rgba(10, 4, 30, 0.85)" />
+    </linearGradient>
+    <linearGradient id="activeNode" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="orchestratorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="cosmicGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="20" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Deep Cosmic Canvas -->
+  <rect width="1200" height="675" fill="url(#bgAgent)" />
+
+  <!-- Background Stars & Particles -->
+  <g fill="#ffffff" opacity="0.6">
+    <circle cx="120" cy="80" r="1.5" />
+    <circle cx="280" cy="140" r="1" />
+    <circle cx="450" cy="60" r="2" opacity="0.9" />
+    <circle cx="890" cy="110" r="1" />
+    <circle cx="1040" cy="70" r="2" />
+    <circle cx="1120" cy="220" r="1.5" />
+    <circle cx="180" cy="420" r="1.5" />
+    <circle cx="70" cy="560" r="2" />
+    <circle cx="980" cy="580" r="1.5" />
+    <circle cx="1150" cy="480" r="2" />
+  </g>
+
+  <!-- Cosmic Nebula Clouds -->
+  <circle cx="250" cy="200" r="220" fill="#7c3aed" opacity="0.18" filter="url(#cosmicGlow)" />
+  <circle cx="950" cy="400" r="260" fill="#06b6d4" opacity="0.16" filter="url(#cosmicGlow)" />
+  <circle cx="600" cy="300" r="200" fill="#ec4899" opacity="0.12" filter="url(#cosmicGlow)" />
+
+  <!-- Perspective Tech Floor Grid -->
+  <g stroke="rgba(139, 92, 246, 0.12)" stroke-width="1.2">
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="360" x2="1200" y2="360" />
+    <line x1="0" y1="480" x2="1200" y2="480" />
+    <line x1="0" y1="600" x2="1200" y2="600" />
+    <line x1="180" y1="0" x2="180" y2="675" />
+    <line x1="360" y1="0" x2="360" y2="675" />
+    <line x1="540" y1="0" x2="540" y2="675" />
+    <line x1="720" y1="0" x2="720" y2="675" />
+    <line x1="900" y1="0" x2="900" y2="675" />
+    <line x1="1080" y1="0" x2="1080" y2="675" />
+  </g>
+
+  <!-- Glass HUD Container -->
+  <g transform="translate(60, 40)">
+    <rect width="1080" height="595" rx="20" fill="url(#agentCardBg)" stroke="rgba(168, 85, 247, 0.4)" stroke-width="1.5" />
+
+    <!-- Top Window Titlebar -->
+    <rect width="1080" height="60" rx="20" fill="rgba(24, 7, 56, 0.7)" />
+    <circle cx="35" cy="30" r="7" fill="#ef4444" opacity="0.8" />
+    <circle cx="60" cy="30" r="7" fill="#eab308" opacity="0.8" />
+    <circle cx="85" cy="30" r="7" fill="#10b981" opacity="0.8" />
+
+    <!-- Brand / Title -->
+    <text x="120" y="37" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="19" letter-spacing="2">AVENZA AI</text>
+    <text x="250" y="37" fill="#c084fc" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="14">| AUTONOMOUS AGENT ORCHESTRATION PLATFORM</text>
+
+    <!-- Top Status Indicator -->
+    <rect x="850" y="18" width="200" height="26" rx="13" fill="rgba(6, 182, 212, 0.2)" stroke="#06b6d4" stroke-width="1" />
+    <circle cx="868" cy="31" r="4" fill="#22d3ee" filter="url(#softGlow)" />
+    <text x="882" y="35" fill="#e0f2fe" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">AGENT WORKFLOW: ACTIVE</text>
+
+    <!-- Central Workflow Architecture Graph -->
+    <!-- Connecting Synapse Lines -->
+    <path d="M 280 200 L 540 200" stroke="#a855f7" stroke-width="2.5" stroke-dasharray="6 4" />
+    <path d="M 540 200 L 800 130" stroke="#06b6d4" stroke-width="2.5" />
+    <path d="M 540 200 L 800 270" stroke="#3b82f6" stroke-width="2.5" />
+    <path d="M 800 130 L 980 200" stroke="#a855f7" stroke-width="2.5" stroke-dasharray="4 4" />
+    <path d="M 800 270 L 980 200" stroke="#06b6d4" stroke-width="2.5" />
+
+    <!-- Node 1: User Goal Ingestion -->
+    <g transform="translate(100, 140)">
+      <rect width="180" height="120" rx="14" fill="rgba(19, 7, 46, 0.85)" stroke="rgba(192, 132, 252, 0.5)" stroke-width="1.5" />
+      <rect x="15" y="15" width="28" height="28" rx="6" fill="#8b5cf6" />
+      <path d="M 22 29 L 36 29 M 29 22 L 29 36" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+      <text x="52" y="34" fill="#e9d5ff" font-family="sans-serif" font-size="12" font-weight="700">1. GOAL INGEST</text>
+      <text x="15" y="66" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="bold">User Intent</text>
+      <text x="15" y="86" fill="#a78bfa" font-family="sans-serif" font-size="11">Decompose Subtasks</text>
+      <text x="15" y="104" fill="#64748b" font-family="sans-serif" font-size="10">State: Plan Formulated</text>
+    </g>
+
+    <!-- Node 2: Central Orchestrator Agent (Master Reasoning Brain) -->
+    <g transform="translate(380, 110)">
+      <rect width="250" height="180" rx="16" fill="rgba(30, 9, 73, 0.9)" stroke="url(#orchestratorGrad)" stroke-width="2" filter="url(#softGlow)" />
+      
+      <circle cx="45" cy="45" r="22" fill="url(#violetCyan)" />
+      <!-- Brain / Compass Icon -->
+      <path d="M 37 45 L 53 45 M 45 37 L 45 53" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+      <circle cx="45" cy="45" r="14" stroke="#ffffff" stroke-width="1.5" fill="none" />
+
+      <text x="80" y="42" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="800">Orchestrator Agent</text>
+      <text x="80" y="58" fill="#d8b4fe" font-family="sans-serif" font-size="11" font-weight="600">ReAct Reasoning Engine</text>
+
+      <!-- Internal Loop Indicators -->
+      <rect x="20" y="85" width="210" height="26" rx="6" fill="rgba(139, 92, 246, 0.25)" stroke="rgba(192, 132, 252, 0.4)" stroke-width="1" />
+      <text x="32" y="102" fill="#f1f5f9" font-family="sans-serif" font-size="11" font-weight="bold">Reason → Plan → Delegate</text>
+
+      <rect x="20" y="120" width="210" height="48" rx="6" fill="rgba(6, 182, 212, 0.15)" stroke="rgba(6, 182, 212, 0.3)" stroke-width="1" />
+      <text x="32" y="138" fill="#38bdf8" font-family="sans-serif" font-size="11" font-weight="600">Dynamic Multi-Agent Swarm</text>
+      <text x="32" y="154" fill="#94a3b8" font-family="sans-serif" font-size="10">Active Threads: 4 Specialized Subagents</text>
+    </g>
+
+    <!-- Node 3A: Tool & Web Search Agent -->
+    <g transform="translate(710, 75)">
+      <rect width="180" height="105" rx="14" fill="rgba(15, 23, 42, 0.85)" stroke="#06b6d4" stroke-width="1.5" />
+      <text x="15" y="28" fill="#67e8f9" font-family="sans-serif" font-size="11" font-weight="bold">AGENT 2A: RESEARCH</text>
+      <text x="15" y="52" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="bold">Deep Web &amp; Docs</text>
+      <text x="15" y="70" fill="#94a3b8" font-family="sans-serif" font-size="11">Synthesize Sources</text>
+      <rect x="15" y="80" width="85" height="16" rx="4" fill="#0369a1" />
+      <text x="24" y="92" fill="#f0f9ff" font-family="sans-serif" font-size="9" font-weight="700">RETRIEVAL OK</text>
+    </g>
+
+    <!-- Node 3B: Code & Execution Agent -->
+    <g transform="translate(710, 215)">
+      <rect width="180" height="105" rx="14" fill="rgba(15, 23, 42, 0.85)" stroke="#3b82f6" stroke-width="1.5" />
+      <text x="15" y="28" fill="#93c5fd" font-family="sans-serif" font-size="11" font-weight="bold">AGENT 2B: EXECUTION</text>
+      <text x="15" y="52" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="bold">Code &amp; Action Tools</text>
+      <text x="15" y="70" fill="#94a3b8" font-family="sans-serif" font-size="11">Self-Correcting Loop</text>
+      <rect x="15" y="80" width="85" height="16" rx="4" fill="#1d4ed8" />
+      <text x="24" y="92" fill="#f0f9ff" font-family="sans-serif" font-size="9" font-weight="700">RUN TESTS ✓</text>
+    </g>
+
+    <!-- Node 4: Synthesis / Evaluator Agent -->
+    <g transform="translate(940, 140)">
+      <rect width="115" height="120" rx="14" fill="rgba(19, 7, 46, 0.85)" stroke="#10b981" stroke-width="1.5" />
+      <text x="12" y="28" fill="#6ee7b7" font-family="sans-serif" font-size="10" font-weight="bold">EVALUATOR</text>
+      <circle cx="57" cy="62" r="18" fill="#047857" />
+      <path d="M 50 62 L 55 67 L 65 57" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="12" y="98" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">Final Output</text>
+      <text x="12" y="112" fill="#a7f3d0" font-family="sans-serif" font-size="9">Verified 100%</text>
+    </g>
+
+    <!-- Bottom Terminal & Reasoning Stream -->
+    <g transform="translate(30, 340)">
+      <rect width="1020" height="225" rx="14" fill="rgba(8, 2, 22, 0.9)" stroke="rgba(139, 92, 246, 0.3)" stroke-width="1" />
+      
+      <!-- Terminal Header -->
+      <rect width="1020" height="36" rx="14" fill="rgba(20, 6, 50, 0.7)" />
+      <text x="20" y="24" fill="#a78bfa" font-family="monospace" font-size="12" font-weight="bold">&gt;_ MULTI-AGENT LOGS &amp; TOOL INVOCATIONS</text>
+      <text x="820" y="24" fill="#06b6d4" font-family="monospace" font-size="11">STEP 4/4 COMPLETED</text>
+
+      <!-- Terminal Lines -->
+      <text x="25" y="65" fill="#38bdf8" font-family="monospace" font-size="13">🤖 [Orchestrator]:</text>
+      <text x="185" y="65" fill="#e2e8f0" font-family="monospace" font-size="13">Plan initiated. Delegating research task to ResearchSubAgent with constraints.</text>
+
+      <text x="25" y="95" fill="#a855f7" font-family="monospace" font-size="13">⚡ [ResearchAgent]:</text>
+      <text x="185" y="95" fill="#cbd5e1" font-family="monospace" font-size="13">Retrieved 12 relevant knowledge chunks. Cross-verified facts. Dispatched payload.</text>
+
+      <text x="25" y="125" fill="#ec4899" font-family="monospace" font-size="13">🛠️ [ActionAgent]:</text>
+      <text x="185" y="125" fill="#cbd5e1" font-family="monospace" font-size="13">Tool Call `generate_solution(context, memory)` exited with code 0. Validation passed.</text>
+
+      <text x="25" y="155" fill="#34d399" font-family="monospace" font-size="13">🎯 [Evaluator]:</text>
+      <text x="185" y="155" fill="#f8fafc" font-family="monospace" font-size="13">Consensus reached across 3 evaluation criteria. High confidence reasoning confirmed.</text>
+
+      <!-- Badges -->
+      <g transform="translate(25, 180)">
+        <rect x="0" y="0" width="130" height="24" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="1" />
+        <text x="12" y="16" fill="#c7d2fe" font-family="sans-serif" font-size="11" font-weight="600">Autonomous Core</text>
+
+        <rect x="145" y="0" width="135" height="24" rx="6" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="1" />
+        <text x="157" y="16" fill="#ddd6fe" font-family="sans-serif" font-size="11" font-weight="600">ReAct Prompt Chain</text>
+
+        <rect x="295" y="0" width="140" height="24" rx="6" fill="#0c4a6e" stroke="#0284c7" stroke-width="1" />
+        <text x="307" y="16" fill="#bae6fd" font-family="sans-serif" font-size="11" font-weight="600">Dynamic Tool Use</text>
+
+        <rect x="450" y="0" width="150" height="24" rx="6" fill="#064e3b" stroke="#059669" stroke-width="1" />
+        <text x="462" y="16" fill="#a7f3d0" font-family="sans-serif" font-size="11" font-weight="600">Multi-Agent Swarm</text>
+      </g>
+    </g>
+  </g>
+</svg>

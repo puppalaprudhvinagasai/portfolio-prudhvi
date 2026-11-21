@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <!-- Dark Cinema Gradient -->
+    <linearGradient id="cineBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0518" />
+      <stop offset="40%" stop-color="#18072e" />
+      <stop offset="75%" stop-color="#2a0845" />
+      <stop offset="100%" stop-color="#06020e" />
+    </linearGradient>
+
+    <!-- Poster Overlay Gradients -->
+    <linearGradient id="posterShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0.1)" />
+      <stop offset="60%" stop-color="rgba(0,0,0,0.6)" />
+      <stop offset="100%" stop-color="rgba(0,0,0,0.95)" />
+    </linearGradient>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#090414" />
+      <stop offset="50%" stop-color="rgba(24, 7, 46, 0.85)" />
+      <stop offset="100%" stop-color="rgba(10, 3, 20, 0.4)" />
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="matchGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+
+    <!-- Poster 1 Art Gradient (Space/Sci-Fi) -->
+    <linearGradient id="post1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="50%" stop-color="#312e81" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <!-- Poster 2 Art Gradient (Cyberpunk) -->
+    <linearGradient id="post2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a044e" />
+      <stop offset="50%" stop-color="#701a75" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+    <!-- Poster 3 Art Gradient (Mystery / Thriller) -->
+    <linearGradient id="post3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="50%" stop-color="#047857" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <!-- Poster 4 Art Gradient (Epic) -->
+    <linearGradient id="post4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350f" />
+      <stop offset="50%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+
+    <filter id="cineGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Cinema Deep Space Background -->
+  <rect width="1200" height="675" fill="url(#cineBg)" />
+
+  <!-- Subtle Film Ambience / Lens Flare Glow -->
+  <circle cx="850" cy="180" r="260" fill="#a855f7" opacity="0.22" filter="url(#cineGlow)" />
+  <circle cx="300" cy="350" r="240" fill="#ec4899" opacity="0.14" filter="url(#cineGlow)" />
+  <circle cx="1050" cy="500" r="220" fill="#3b82f6" opacity="0.15" filter="url(#cineGlow)" />
+
+  <!-- Streaming UI Shell Container -->
+  <g transform="translate(60, 35)">
+    <rect width="1080" height="605" rx="20" fill="rgba(14, 5, 32, 0.85)" stroke="rgba(168, 85, 247, 0.4)" stroke-width="1.5" />
+
+    <!-- Top Navigation Header -->
+    <rect width="1080" height="60" rx="20" fill="rgba(24, 8, 52, 0.9)" />
+    <circle cx="35" cy="30" r="7" fill="#ef4444" opacity="0.8" />
+    <circle cx="60" cy="30" r="7" fill="#eab308" opacity="0.8" />
+    <circle cx="85" cy="30" r="7" fill="#10b981" opacity="0.8" />
+
+    <!-- Logo / Title -->
+    <text x="120" y="37" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="900" font-size="18" letter-spacing="1.5">CINEVERSE <tspan fill="#ec4899">AI</tspan></text>
+    <text x="270" y="36" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Discover</text>
+    <text x="360" y="36" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Top Recommendations</text>
+    <text x="540" y="36" fill="#c084fc" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Cosine Similarity Engine</text>
+
+    <!-- Search / Engine Status -->
+    <rect x="800" y="17" width="250" height="28" rx="14" fill="rgba(168, 85, 247, 0.2)" stroke="#a855f7" stroke-width="1" />
+    <text x="820" y="35" fill="#f1f5f9" font-family="sans-serif" font-size="11" font-weight="600">🔍 TF-IDF Vector Space: 5k+ Titles</text>
+
+    <!-- Hero Featured Recommendation Banner -->
+    <g transform="translate(30, 80)">
+      <rect width="1020" height="220" rx="14" fill="#130729" stroke="rgba(168, 85, 247, 0.25)" stroke-width="1" />
+      
+      <!-- Backdrop Graphic -->
+      <g opacity="0.6">
+        <circle cx="800" cy="110" r="90" fill="#3b82f6" filter="url(#cineGlow)" />
+        <circle cx="650" cy="80" r="70" fill="#ec4899" filter="url(#cineGlow)" />
+      </g>
+      <rect width="600" height="220" rx="14" fill="url(#heroGradient)" />
+
+      <!-- Movie Details -->
+      <rect x="35" y="25" width="160" height="24" rx="12" fill="url(#matchGrad)" />
+      <text x="48" y="41" fill="#022c22" font-family="sans-serif" font-size="12" font-weight="800">★ 98.8% MATCH FOR YOU</text>
+      
+      <text x="35" y="90" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="900" font-size="34" letter-spacing="1">INTERSTELLAR</text>
+      
+      <text x="35" y="118" fill="#e2e8f0" font-family="sans-serif" font-size="13" font-weight="600">2014 • PG-13 • 2h 49m • <tspan fill="#f59e0b">IMDb 8.7/10</tspan></text>
+      <text x="35" y="142" fill="#94a3b8" font-family="sans-serif" font-size="12">Genres: Sci-Fi, Adventure, Drama • Directed by Christopher Nolan</text>
+      <text x="35" y="162" fill="#c084fc" font-family="sans-serif" font-size="11" font-weight="600">Features: Space Exploration, Time Dilation, Black Hole Physics, High Emotional Resonance</text>
+
+      <!-- Action Buttons -->
+      <rect x="35" y="175" width="130" height="32" rx="8" fill="#a855f7" />
+      <text x="55" y="196" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">▶ Play Trailer</text>
+
+      <rect x="180" y="175" width="160" height="32" rx="8" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" />
+      <text x="195" y="196" fill="#f8fafc" font-family="sans-serif" font-size="12" font-weight="600">+ Add to Watchlist</text>
+      
+      <rect x="780" y="25" width="210" height="36" rx="8" fill="rgba(24, 7, 56, 0.85)" stroke="#a855f7" stroke-width="1" />
+      <text x="795" y="47" fill="#d8b4fe" font-family="sans-serif" font-size="11" font-weight="700">Cosine Similarity: 0.9882</text>
+    </g>
+
+    <!-- Bottom Carousel: Top Recommended Movie Posters -->
+    <g transform="translate(30, 320)">
+      <text x="0" y="20" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="16" font-weight="800">Similar Movies You Might Like (Content-Based Filtering)</text>
+      <text x="720" y="20" fill="#c084fc" font-family="sans-serif" font-size="12" font-weight="600">Based on Genre, Keywords, Cast &amp; Crew</text>
+
+      <!-- Card 1: Inception -->
+      <g transform="translate(0, 35)">
+        <rect width="235" height="225" rx="12" fill="url(#post1)" />
+        <rect width="235" height="225" rx="12" fill="url(#posterShadow)" />
+        <circle cx="117" cy="70" r="30" fill="#4338ca" opacity="0.6" />
+        <text x="117" y="78" fill="#ffffff" font-family="sans-serif" font-size="28" font-weight="bold" text-anchor="middle">🌀</text>
+        
+        <rect x="15" y="15" width="85" height="20" rx="10" fill="#059669" />
+        <text x="24" y="29" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold">96.4% MATCH</text>
+
+        <text x="15" y="165" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="bold">Inception</text>
+        <text x="15" y="185" fill="#cbd5e1" font-family="sans-serif" font-size="11">2010 • Sci-Fi / Mind-Bender</text>
+        <text x="15" y="205" fill="#f59e0b" font-family="sans-serif" font-size="11" font-weight="bold">★ 8.8 • IMDb Top 250</text>
+      </g>
+
+      <!-- Card 2: Blade Runner 2049 -->
+      <g transform="translate(260, 35)">
+        <rect width="235" height="225" rx="12" fill="url(#post2)" />
+        <rect width="235" height="225" rx="12" fill="url(#posterShadow)" />
+        <circle cx="117" cy="70" r="30" fill="#9d174d" opacity="0.6" />
+        <text x="117" y="78" fill="#ffffff" font-family="sans-serif" font-size="28" font-weight="bold" text-anchor="middle">⚡</text>
+
+        <rect x="15" y="15" width="85" height="20" rx="10" fill="#059669" />
+        <text x="24" y="29" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold">94.1% MATCH</text>
+
+        <text x="15" y="165" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="bold">Blade Runner 2049</text>
+        <text x="15" y="185" fill="#cbd5e1" font-family="sans-serif" font-size="11">2017 • Cyberpunk / Mystery</text>
+        <text x="15" y="205" fill="#f59e0b" font-family="sans-serif" font-size="11" font-weight="bold">★ 8.0 • Denis Villeneuve</text>
+      </g>
+
+      <!-- Card 3: The Martian -->
+      <g transform="translate(520, 35)">
+        <rect width="235" height="225" rx="12" fill="url(#post4)" />
+        <rect width="235" height="225" rx="12" fill="url(#posterShadow)" />
+        <circle cx="117" cy="70" r="30" fill="#b45309" opacity="0.6" />
+        <text x="117" y="78" fill="#ffffff" font-family="sans-serif" font-size="28" font-weight="bold" text-anchor="middle">🚀</text>
+
+        <rect x="15" y="15" width="85" height="20" rx="10" fill="#059669" />
+        <text x="24" y="29" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold">92.5% MATCH</text>
+
+        <text x="15" y="165" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="bold">The Martian</text>
+        <text x="15" y="185" fill="#cbd5e1" font-family="sans-serif" font-size="11">2015 • Sci-Fi / Survival</text>
+        <text x="15" y="205" fill="#f59e0b" font-family="sans-serif" font-size="11" font-weight="bold">★ 8.0 • Matt Damon</text>
+      </g>
+
+      <!-- Card 4: Arrival -->
+      <g transform="translate(780, 35)">
+        <rect width="240" height="225" rx="12" fill="url(#post3)" />
+        <rect width="240" height="225" rx="12" fill="url(#posterShadow)" />
+        <circle cx="120" cy="70" r="30" fill="#065f46" opacity="0.6" />
+        <text x="120" y="78" fill="#ffffff" font-family="sans-serif" font-size="28" font-weight="bold" text-anchor="middle">🌌</text>
+
+        <rect x="15" y="15" width="85" height="20" rx="10" fill="#059669" />
+        <text x="24" y="29" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold">90.8% MATCH</text>
+
+        <text x="15" y="165" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="bold">Arrival</text>
+        <text x="15" y="185" fill="#cbd5e1" font-family="sans-serif" font-size="11">2016 • Sci-Fi / Linguistics</text>
+        <text x="15" y="205" fill="#f59e0b" font-family="sans-serif" font-size="11" font-weight="bold">★ 7.9 • Oscar Winner</text>
+      </g>
+    </g>
+  </g>
+</svg>

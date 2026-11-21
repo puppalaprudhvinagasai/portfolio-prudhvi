@@ -18,10 +18,11 @@ export const Skills = () => {
     >
       <SkillText />
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      {/* Row 1: 13 items */}
+      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center z-20">
         {SKILL_DATA.map((skill, i) => (
           <SkillDataProvider
-            key={skill.skill_name}
+            key={skill.skill_name + i}
             src={skill.image}
             name={skill.skill_name}
             width={skill.width}
@@ -31,10 +32,11 @@ export const Skills = () => {
         ))}
       </div>
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      {/* Row 2: 10 items */}
+      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center z-20">
         {FRONTEND_SKILL.map((skill, i) => (
           <SkillDataProvider
-            key={skill.skill_name}
+            key={skill.skill_name + i}
             src={skill.image}
             name={skill.skill_name}
             width={skill.width}
@@ -43,10 +45,12 @@ export const Skills = () => {
           />
         ))}
       </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+
+      {/* Row 3: 8 items */}
+      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center z-20">
         {BACKEND_SKILL.map((skill, i) => (
           <SkillDataProvider
-            key={skill.skill_name}
+            key={skill.skill_name + i}
             src={skill.image}
             name={skill.skill_name}
             width={skill.width}
@@ -55,10 +59,12 @@ export const Skills = () => {
           />
         ))}
       </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+
+      {/* Row 4: 4 items */}
+      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center z-20">
         {FULLSTACK_SKILL.map((skill, i) => (
           <SkillDataProvider
-            key={skill.skill_name}
+            key={skill.skill_name + i}
             src={skill.image}
             name={skill.skill_name}
             width={skill.width}
@@ -67,10 +73,12 @@ export const Skills = () => {
           />
         ))}
       </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+
+      {/* Row 5: 1 item at apex */}
+      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center z-20">
         {OTHER_SKILL.map((skill, i) => (
           <SkillDataProvider
-            key={skill.skill_name}
+            key={skill.skill_name + i}
             src={skill.image}
             name={skill.skill_name}
             width={skill.width}

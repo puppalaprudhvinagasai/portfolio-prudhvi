@@ -1,21 +1,64 @@
-import { FaYoutube, FaFacebook } from "react-icons/fa";
 import {
-  RxDiscordLogo,
   RxGithubLogo,
   RxInstagramLogo,
-  RxTwitterLogo,
   RxLinkedinLogo,
 } from "react-icons/rx";
 
+export const SOCIALS = [
+  {
+    name: "Instagram",
+    icon: RxInstagramLogo,
+    link: "https://www.instagram.com/puppala_prudhvi_1015?lqvp=MTFtaHY0eGIxM2VudA==",
+  },
+  {
+    name: "LinkedIn",
+    icon: RxLinkedinLogo,
+    link: "https://www.linkedin.com/in/puppala-prudhvi-n-63a48b3a2",
+  },
+  {
+    name: "GitHub",
+    icon: RxGithubLogo,
+    link: "https://github.com/puppalaprudhvinagasai",
+  },
+] as const;
+
+export const NAV_LINKS = [
+  {
+    title: "About",
+    link: "#about-me",
+  },
+  {
+    title: "Skills",
+    link: "#skills",
+  },
+  {
+    title: "Projects",
+    link: "#projects",
+  },
+  {
+    title: "Experience & Hackathons",
+    link: "#experience",
+  },
+  {
+    title: "Contact",
+    link: "#contact",
+  },
+] as const;
+
+export const LINKS = {
+  sourceCode: "https://github.com/puppalaprudhvinagasai",
+};
+
+// Row 1: 13 items (Top widest row in pyramid)
 export const SKILL_DATA = [
   {
-    skill_name: "HTML",
+    skill_name: "HTML5",
     image: "html.png",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "CSS",
+    skill_name: "CSS3",
     image: "css.png",
     width: 80,
     height: 80,
@@ -33,7 +76,7 @@ export const SKILL_DATA = [
     height: 80,
   },
   {
-    skill_name: "React",
+    skill_name: "React.js",
     image: "react.png",
     width: 80,
     height: 80,
@@ -45,19 +88,13 @@ export const SKILL_DATA = [
     height: 80,
   },
   {
-    skill_name: "React Query",
-    image: "reactquery.png",
-    width: 80,
-    height: 80,
-  },
-  {
     skill_name: "TypeScript",
     image: "ts.png",
     width: 80,
     height: 80,
   },
   {
-    skill_name: "Next.js 14",
+    skill_name: "Next.js",
     image: "next.png",
     width: 80,
     height: 80,
@@ -69,10 +106,16 @@ export const SKILL_DATA = [
     height: 80,
   },
   {
-    skill_name: "Stripe",
-    image: "stripe.png",
-    width: 80,
-    height: 80,
+    skill_name: "Python",
+    image: "python.svg",
+    width: 75,
+    height: 75,
+  },
+  {
+    skill_name: "Java",
+    image: "java.svg",
+    width: 70,
+    height: 70,
   },
   {
     skill_name: "Node.js",
@@ -88,117 +131,13 @@ export const SKILL_DATA = [
   },
 ] as const;
 
-export const SOCIALS = [
-  {
-    name: "Instagram",
-    icon: RxInstagramLogo,
-    link: "https://instagram.com",
-  },
-  {
-    name: "Facebook",
-    icon: FaFacebook,
-    link: "https://facebook.com",
-  },
-  {
-    name: "Twitter",
-    icon: RxTwitterLogo,
-    link: "https://x.com/_sanidhyy",
-  },
-] as const;
-
+// Row 2: 10 items (Tapering row 2)
 export const FRONTEND_SKILL = [
-  {
-    skill_name: "HTML",
-    image: "html.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "CSS",
-    image: "css.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "JavaScript",
-    image: "js.png",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Tailwind CSS",
-    image: "tailwind.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Material UI",
-    image: "mui.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React",
-    image: "react.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Redux",
-    image: "redux.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React Query",
-    image: "reactquery.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "TypeScript",
-    image: "ts.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Next.js 14",
-    image: "next.png",
-    width: 80,
-    height: 80,
-  },
-] as const;
-
-export const BACKEND_SKILL = [
-  {
-    skill_name: "Node.js",
-    image: "node.png",
-    width: 80,
-    height: 80,
-  },
   {
     skill_name: "Express.js",
     image: "express.png",
     width: 80,
     height: 80,
-  },
-  {
-    skill_name: "MongoDB",
-    image: "mongodb.png",
-    width: 40,
-    height: 40,
-  },
-  {
-    skill_name: "Firebase",
-    image: "firebase.png",
-    width: 55,
-    height: 55,
-  },
-  {
-    skill_name: "PostgreSQL",
-    image: "postgresql.png",
-    width: 70,
-    height: 70,
   },
   {
     skill_name: "MySQL",
@@ -207,29 +146,124 @@ export const BACKEND_SKILL = [
     height: 70,
   },
   {
-    skill_name: "Prisma",
-    image: "prisma.png",
+    skill_name: "PostgreSQL",
+    image: "postgresql.png",
     width: 70,
     height: 70,
   },
   {
-    skill_name: "Graphql",
-    image: "graphql.png",
-    width: 80,
-    height: 80,
+    skill_name: "SQL",
+    image: "sql.svg",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "RESTful APIs",
+    image: "rest.svg",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "Responsive Web Design",
+    image: "responsive.svg",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "Git",
+    image: "git.svg",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "GitHub",
+    image: "github.svg",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "VS Code",
+    image: "vscode.svg",
+    width: 65,
+    height: 65,
+  },
+  {
+    skill_name: "Streamlit",
+    image: "streamlit.svg",
+    width: 70,
+    height: 70,
   },
 ] as const;
 
-export const FULLSTACK_SKILL = [
+// Row 3: 8 items (Tapering row 3)
+export const BACKEND_SKILL = [
   {
-    skill_name: "React Native",
-    image: "reactnative.png",
+    skill_name: "Docker (Learning)",
+    image: "docker.png",
     width: 70,
     height: 70,
   },
   {
-    skill_name: "Tauri",
-    image: "tauri.png",
+    skill_name: "AWS Basics (Learning)",
+    image: "aws.svg",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "DSA",
+    image: "dsa.svg",
+    width: 65,
+    height: 65,
+  },
+  {
+    skill_name: "OOP",
+    image: "oop.svg",
+    width: 65,
+    height: 65,
+  },
+  {
+    skill_name: "DBMS",
+    image: "dbms.svg",
+    width: 65,
+    height: 65,
+  },
+  {
+    skill_name: "Operating Systems",
+    image: "os.svg",
+    width: 65,
+    height: 65,
+  },
+  {
+    skill_name: "Computer Networks",
+    image: "networks.svg",
+    width: 65,
+    height: 65,
+  },
+  {
+    skill_name: "ML Fundamentals",
+    image: "ml.svg",
+    width: 65,
+    height: 65,
+  },
+] as const;
+
+// Row 4: 4 items (Tapering row 4)
+export const FULLSTACK_SKILL = [
+  {
+    skill_name: "Java",
+    image: "java.svg",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "Python",
+    image: "python.svg",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "TypeScript (Learning)",
+    image: "ts.png",
     width: 70,
     height: 70,
   },
@@ -239,126 +273,173 @@ export const FULLSTACK_SKILL = [
     width: 70,
     height: 70,
   },
-
-  {
-    skill_name: "Figma",
-    image: "figma.png",
-    width: 50,
-    height: 50,
-  },
 ] as const;
 
+// Row 5: 1 item (Apex at bottom center)
 export const OTHER_SKILL = [
   {
-    skill_name: "Go",
-    image: "go.png",
-    width: 60,
-    height: 60,
+    skill_name: "C",
+    image: "c.svg",
+    width: 65,
+    height: 65,
   },
 ] as const;
 
 export const PROJECTS = [
   {
-    title: "Modern Next.js 14 Portfolio",
+    title: "AgriPool — Agricultural Produce Aggregation & Settlement Platform",
+    domain: "Agriculture & Supply Chain",
+    tech: "Web Application, Produce Pooling & Settlement Workflows",
     description:
-      'Embark on a journey through my professional evolution with the "Modern Next.js Portfolio" - a dynamic showcase of my skills, experiences, and passion for web development. Crafted with precision and powered by Next.js, this portfolio is more than just a static display; it\'s an immersive experience that reflects the cutting edge of modern web technologies.',
-    image: "/projects/project-1.png",
-    link: "https://example.com",
+      "Agriculture & supply chain platform for agricultural produce aggregation, digital lot management, logistics coordination, and settlement workflows.",
+    image: "/projects/agripool.jpg",
+    link: "https://agriculture-one-tau.vercel.app/",
+    isLive: true,
   },
   {
-    title: "Interactive Cards Portfolio",
+    title: "MedSafe — Smart Medication Adherence & Safety Platform",
+    domain: "Healthcare & Medication Safety",
+    tech: "React.js, Node.js, AI/ML, REST APIs",
     description:
-      'Step into the extraordinary world of my professional journey through the "Interactive Cards Portfolio" - an innovative and visually captivating platform that redefines the traditional portfolio experience. Ditching the conventional static layout, this portfolio leverages interactive cards to showcase my skills, projects, and personality in an engaging and dynamic manner.',
-    image: "/projects/project-2.png",
-    link: "https://example.com",
+      "Healthcare web platform for medication adherence tracking, AI-driven drug interaction checking, and automated caregiver escalation alerts with a responsive interface for patients and caregivers.",
+    image: "/projects/medsafe.jpg",
+    link: "https://healthcare-xi-five.vercel.app/",
+    isLive: true,
   },
   {
-    title: "Space Themed Website",
+    title: "Avenza AI",
+    domain: "Agentic AI & Autonomous Workflows",
+    tech: "AI Project",
     description:
-      'Embark on an interstellar journey with my "Space Themed Website", a mesmerizing space-themed website that invites you to explore the cosmic wonders beyond our world. Immerse yourself in an awe-inspiring digital experience that blends cutting-edge design with the mysteries of the universe.',
-    image: "/projects/project-3.png",
-    link: "https://example.com",
+      "Agentic AI platform representing autonomous agents, multi-step AI workflows, and intelligent reasoning with source code on GitHub (live deployment pending).",
+    image: "/projects/avenza-ai.svg",
+    link: "https://github.com/puppalaprudhvinagasai/avenza-AI.git",
+    status: "Hosted on GitHub (Not live hosted yet)",
+    isLive: false,
+  },
+  {
+    title: "Movie Recommendation System",
+    domain: "Cinema & AI Recommender Engine",
+    tech: "Python, Pandas, Scikit-learn, Streamlit, Git",
+    description:
+      "Realistic cinema and streaming recommendation system built with Python, Pandas, Scikit-learn, Streamlit, and Git, using data cleaning, feature engineering, TF-IDF Vectorization, and Cosine Similarity.",
+    image: "/projects/movie-recommender.svg",
+    link: "https://github.com/puppalaprudhvinagasai/Movie-recommender-system.git",
+    status: "Hosted on GitHub (Not live hosted yet)",
+    isLive: false,
+  },
+] as const;
+
+export const EXPERIENCES = [
+  {
+    title: "HackSprint (Sept 2026)",
+    organization:
+      "Swarnandhra College of Engineering & Technology (Dept. of IT & CSE - Data Science)",
+    badge: "Certificate of Participation",
+    description:
+      "24-Hour National Level Hackathon focusing on real-world engineering solutions and innovative software development.",
+  },
+  {
+    title: "Code Clash & Pulse Quest",
+    organization: "Elan & nVision 2026, IIT Hyderabad",
+    badge: "Technical Competition",
+    description:
+      "Competitive coding and innovation-driven technical events challenging algorithmic efficiency, problem-solving, and logic.",
+  },
+  {
+    title: "Designathon",
+    organization: "IIT Jodhpur",
+    badge: "National-Level Competition",
+    description:
+      "National-level product design competition focused on user-centric thinking, UX architecture, and modern product strategy.",
+  },
+  {
+    title: "Xcelerate",
+    organization: "Bangalore Institute of Technology",
+    badge: "24-Hour Hackathon",
+    description:
+      "24-Hour Hackathon centered on rapid end-to-end prototyping and delivering robust functional MVPs under tight deadlines.",
+  },
+  {
+    title: "BIT Hackathon 2025",
+    organization: "Bangalore Institute of Technology",
+    badge: "Top 100 Teams",
+    description:
+      "Ranked among the Top 100 Teams in competitive technology problem statements, software design, and execution.",
+  },
+  {
+    title: "LeetCode",
+    organization: "Data Structures & Algorithms",
+    badge: "150+ Problems Solved",
+    description:
+      "Solved 150+ Data Structures & Algorithms (DSA) problems, strengthening analytical problem-solving and algorithmic foundations.",
   },
 ] as const;
 
 export const FOOTER_DATA = [
   {
-    title: "Community",
+    title: "Contact",
     data: [
       {
-        name: "YouTube",
-        icon: FaYoutube,
-        link: "https://youtube.com",
+        name: "puppalaprudhvinagasai@gmail.com",
+        icon: null,
+        link: "mailto:puppalaprudhvinagasai@gmail.com",
+      },
+      {
+        name: "+91 9000392639",
+        icon: null,
+        link: "tel:+919000392639",
+      },
+      {
+        name: "Machilipatnam, Andhra Pradesh",
+        icon: null,
+        link: "#contact",
+      },
+    ],
+  },
+  {
+    title: "Connect",
+    data: [
+      {
+        name: "LinkedIn",
+        icon: RxLinkedinLogo,
+        link: "https://www.linkedin.com/in/puppala-prudhvi-n-63a48b3a2",
       },
       {
         name: "GitHub",
         icon: RxGithubLogo,
-        link: "https://github.com",
+        link: "https://github.com/puppalaprudhvinagasai",
       },
-      {
-        name: "Discord",
-        icon: RxDiscordLogo,
-        link: "https://discord.com",
-      },
-    ],
-  },
-  {
-    title: "Social Media",
-    data: [
       {
         name: "Instagram",
         icon: RxInstagramLogo,
-        link: "https://instagram.com",
-      },
-      {
-        name: "Twitter",
-        icon: RxTwitterLogo,
-        link: "https://x.com/_sanidhyy",
-      },
-      {
-        name: "Linkedin",
-        icon: RxLinkedinLogo,
-        link: "https://linkedin.com",
+        link: "https://www.instagram.com/puppala_prudhvi_1015?lqvp=MTFtaHY0eGIxM2VudA==",
       },
     ],
   },
   {
-    title: "About",
+    title: "Navigation",
     data: [
       {
-        name: "Become Sponsor",
+        name: "About",
         icon: null,
-        link: "https://youtube.com",
+        link: "#about-me",
       },
       {
-        name: "Learning about me",
+        name: "Skills",
         icon: null,
-        link: "https://example.com",
+        link: "#skills",
       },
       {
-        name: "Contact Me",
+        name: "Projects",
         icon: null,
-        link: "mailto:contact@example.com",
+        link: "#projects",
+      },
+      {
+        name: "Experience & Hackathons",
+        icon: null,
+        link: "#experience",
       },
     ],
   },
 ] as const;
-
-export const NAV_LINKS = [
-  {
-    title: "About me",
-    link: "#about-me",
-  },
-  {
-    title: "Skills",
-    link: "#skills",
-  },
-  {
-    title: "Projects",
-    link: "#projects",
-  },
-] as const;
-
-export const LINKS = {
-  sourceCode: "https://github.com/sanidhyy/space-portfolio",
-};
